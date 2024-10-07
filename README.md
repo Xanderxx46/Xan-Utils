@@ -6,7 +6,7 @@ If you want to add your own customized messages to the main bot:
 
 1. Go to the [ask-vc.ts](/src/commands/ask-vc.ts) file
 
-2. Go to line 40 and add the following:
+2. Go to [line 40](/src/commands/ask-vc.ts?plain#L40) and add the following:
 ```ts
 const YOUR_DISCORD_NAME = "YOUR_DISCORD_ID"
 ```
@@ -15,7 +15,7 @@ const YOUR_DISCORD_NAME = "YOUR_DISCORD_ID"
 
 ### Option 1: Static Messages
 
-1. Go to line 86 of the [ask-vc.ts](/src/commands/ask-vc.ts) file and add an `else if` statement.
+1. Go to line 86 of the [ask-vc.ts](/src/commands/ask-vc.ts?plain#L86) file and add an `else if` statement.
 
 2. It should look something like this:
 ```ts
@@ -24,7 +24,7 @@ else if (userId === YOUR_DISCORD_NAME) { await interaction.reply({ content: "YOU
 
 ### Option 2: Random Messages
 
-1. Go to line 36 of the [ask-vc.ts](/src/commands/ask-vc.ts) file and add an array.
+1. Go to line 36 of the [ask-vc.ts](/src/commands/ask-vc.ts?plain#L36) file and add an array.
 
 2. It should look something like this:
 ```ts
@@ -38,7 +38,7 @@ const askExampleDifferentMessages (This can be whatever you want) = [
 ```ts
 const askExamplekMessage = getRandom(askExampleDifferentResponses);
 ```
-4. Then you can go to line 86 of the [ask-vc.ts](/src/commands/ask-vc.ts) file and add an `else if` statement.
+4. Then you can go to line 86 of the [ask-vc.ts](/src/commands/ask-vc.ts?plain#L86) file and add an `else if` statement.
 
 5. It should look something like this:
 ```ts
