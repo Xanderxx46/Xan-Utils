@@ -1,0 +1,3 @@
+name = "xan-utils"
+main = "src/index.ts"
+compatibility_date = "2023-10-06"
