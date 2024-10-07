@@ -5,6 +5,7 @@ import type { ExecutionContext } from "@cloudflare/workers-types/2023-07-01";
 import PingCommand from "./commands/ping";
 import HelpCommand from "./commands/help";
 import VcCommand from "./commands/ask-vc";
+import RemindCommand from "./commands/remind";
 
 type Env = {
 	CLIENT_ID: string;
@@ -25,6 +26,7 @@ export default {
 				new HelpCommand(),
 				new PingCommand(),
 				new VcCommand(),
+				new RemindCommand(),
 			],
 		);
 

@@ -18,10 +18,22 @@ const getRandom = (array: string[]) => {
 class HelpEmbed extends Embed {
 	constructor(title: string) {
 		super({});
-		this.description =
-			'</help:1292673305840713739> - Show this menu \n </ping:1292673305840713740> - Bot replies with "Pong" \n ##Fun Commands \n </ask-vc:1292673305840713741> - Ask someone to vc with you! \n';
+		this.description = "The Help Embed!";
 		this.title = title;
 		this.color = 0xff0000;
+		this.fields = [
+			{
+				name: "Useful Commands:",
+				value:
+					'</help:1292673305840713739> - Show this menu \n </ping:1292673305840713740> - Bot replies with "Pong"',
+				inline: true,
+			},
+			{
+				name: "Fun Commands:",
+				value: "</ask-vc:1292673305840713741> - Ask someone to vc with you!",
+				inline: true,
+			},
+		];
 	}
 }
 
