@@ -56,14 +56,14 @@ export default class RemindCommand extends Command {
 			} else {
 				// others
 				await interaction.reply({
-					content: `Hey bro, dont forget: \n\n${about}`,
+					content: `Hey bro, dont forget: \n\n${about}\n\n<@${targetId}>`,
 				});
 			}
 		}
 		// For anyone else
 		else {
 			await interaction.reply({
-				content: `Hey man, don't forget: \n\n${about}`,
+				content: `Hey man, don't forget: \n\n${about}\n\n<@${targetId}>`,
 			});
 		}
 	}

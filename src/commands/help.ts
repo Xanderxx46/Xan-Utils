@@ -30,7 +30,8 @@ class HelpEmbed extends Embed {
 			},
 			{
 				name: "Fun Commands:",
-				value: "</ask-vc:1292673305840713741> - Ask someone to vc with you!",
+				value:
+					"</ask-vc:1292673305840713741> - Ask someone to vc with you! \n </remind:1292950221495730300> - Remind someone about something!",
 				inline: true,
 			},
 		];
