@@ -6,7 +6,7 @@ If you want to add your own customized messages to the main bot:
 
 1. Go to the [ask-vc.ts](/src/commands/ask-vc.ts) file
 
-2. Go to [line 40](/src/commands/ask-vc.ts?plain#L40) and add the following:
+2. Go to [line 23](/src/commands/ask-vc.ts?plain#L23) and add the following:
 ```ts
 const YOUR_DISCORD_NAME = "YOUR_DISCORD_ID"
 ```
@@ -15,7 +15,7 @@ const YOUR_DISCORD_NAME = "YOUR_DISCORD_ID"
 
 ### Option 1: Static Messages
 
-1. Go to line 86 of the [ask-vc.ts](/src/commands/ask-vc.ts?plain#L86) file and add an `else if` statement.
+1. Go to line 69 of the [ask-vc.ts](/src/commands/ask-vc.ts?plain#L86) file and add an `else if` statement.
 
 2. It should look something like this:
 ```ts
@@ -24,23 +24,26 @@ else if (userId === YOUR_DISCORD_NAME) { await interaction.reply({ content: "YOU
 
 ### Option 2: Random Messages
 
-1. Go to line 36 of the [ask-vc.ts](/src/commands/ask-vc.ts?plain#L36) file and add an array.
+1. Copy src/random-messages/example folder (replace example with your name)
 
-2. It should look something like this:
+2. Replace the example messages with anything you want, it should look like this.
 ```ts
-const askExampleDifferentMessages (This can be whatever you want) = [ 
+module.exports = [ 
 "Hello, want to vc?",
 "Hey can you vc?",
 "Hey bro, can you vc?",
 ]
 ```
-3. After adding your array, go down to line 64 and add the following:
+3. After adding your file, go down to line 12 of the [ask-vc.ts](/src/commands/ask-vc.ts?plain#L12) file and add the following (replace example with your name):
 ```ts
-const askExamplekMessage = getRandom(askExampleDifferentResponses);
+import exampleRandom from "../random-messages/example/example"
 ```
-4. Then you can go to line 86 of the [ask-vc.ts](/src/commands/ask-vc.ts?plain#L86) file and add an `else if` statement.
 
-5. It should look something like this:
+4. Then you can go to line 46 of the [ask-vc.ts](/src/commands/ask-vc.ts?plain#L46) file and add the following (replace example with your name):
+```ts
+const askExampleMessage = getRandom(exampleRandom);
+```
+5. Go to line 69 of the [ask-vc.ts](/src/commands/ask-vc.ts?plain#L69) file and add the following (replace example with your name):
 ```ts
 else if (userId === YOUR_DISCORD_NAME) { await interaction.reply({ content: askExampleMessage}); }
 ```

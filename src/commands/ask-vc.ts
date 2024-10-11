@@ -5,6 +5,11 @@ import {
 	type CommandInteraction,
 } from "@buape/carbon";
 
+import stringsRandom from "../random-messages/xander/strings"; // Produces a VS code error only
+import wifeyRandom from "../random-messages/xander/wifey"; // Produces a VS code error only
+
+// import exampleRandom from "../random-messages/example/example"; | the example
+
 const getRandom = (array: string[]) => {
 	const randomIndex = Math.floor(Math.random() * array.length);
 	return array[randomIndex];
@@ -12,27 +17,6 @@ const getRandom = (array: string[]) => {
 
 let targetId = "";
 let userId = "";
-
-const askStringsDifferentResponses = [
-	"Hey dumbass wanna vc?",
-	"Heyyyyy you should vc with me",
-	"Hey bitch im bored, vc?",
-	"Im gonna shoot you if you dont vc",
-	"Vc with me or death",
-	"Vc?",
-	"im lonely, vc?",
-	"im bored, vc?",
-];
-
-const askWifeyDifferentResponses = [
-	"Hey baby i wanna vc",
-	"Vc?",
-	"Call? (on snap)",
-	"Im boreddddddddddddddd call with me",
-	"Meow i wanna call",
-	"Give me attention bitch",
-	"I love you now call",
-];
 
 const xander = "829909201262084096";
 const strings = "343915513380077569";
@@ -59,8 +43,8 @@ export default class VcCommand extends Command {
 		const target = interaction.options.getUser("user", true);
 		targetId = target.id;
 
-		const askStringsMessage = getRandom(askStringsDifferentResponses);
-		const askWifeyMessage = getRandom(askWifeyDifferentResponses);
+		const askStringsMessage = getRandom(stringsRandom);
+		const askWifeyMessage = getRandom(wifeyRandom);
 
 		// For Xander
 		if (userId === xander) {
