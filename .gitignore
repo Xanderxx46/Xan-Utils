@@ -1,3 +1,4 @@
 node_modules
 .wrangler
 .git
+.dev.vars

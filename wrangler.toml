@@ -1,3 +1,3 @@
-name = "xan-utils"
+name = "cag-faq-bot"
 main = "src/index.ts"
 compatibility_date = "2023-10-06"
